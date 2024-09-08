@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.Expass.client.PollAppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-08T16:38:55" hostname="kajas-mbp.lan" time="0.571">
+  <properties/>
+  <testcase name="testScenarioFlow()" classname="com.example.Expass.client.PollAppTest" time="0.571"/>
+  <system-out><![CDATA[18:38:54.578 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.Expass.client.PollAppTest]: PollAppTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:38:54.646 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.Expass.ExpassApplication for test class com.example.Expass.client.PollAppTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2024-09-08T18:38:54.828+02:00  INFO 18426 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : Starting PollAppTest using Java 21 with PID 18426 (started by kajaskramo in /Users/kajaskramo/Library/CloudStorage/OneDrive-Personlig/Programvareutvikling/Semester 1/DAT250/Expass/Expass2)
+2024-09-08T18:38:54.828+02:00  INFO 18426 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : No active profile set, falling back to 1 default profile: "default"
+2024-09-08T18:38:55.330+02:00  INFO 18426 --- [Expass] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-09-08T18:38:55.330+02:00  INFO 18426 --- [Expass] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-09-08T18:38:55.331+02:00  INFO 18426 --- [Expass] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-09-08T18:38:55.348+02:00  INFO 18426 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : Started PollAppTest in 0.628 seconds (process running for 1.261)
+]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/kajaskramo/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

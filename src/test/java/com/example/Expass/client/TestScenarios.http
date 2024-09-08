@@ -1,0 +1,103 @@
+# Create a new user
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "username": "user1",
+  "email": "user1@example.com"
+}
+
+###
+
+# List all users (should show User1)
+GET http://localhost:8080/users
+
+###
+
+# Create another user
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "userId": 2,
+  "username": "user2",
+  "email": "user2@example.com"
+}
+
+###
+
+# List all users again (should show User1 and User2)
+GET http://localhost:8080/users
+
+###
+
+# User 1 creates a new poll
+POST http://localhost:8080/polls
+Content-Type: application/json
+
+{
+  "pollId": 1,
+  "userId": 1,
+  "question": "What is your favorite color?",
+  "publishedAt": "2024-09-03T12:00:00Z",
+  "validUntil": "2024-09-10T12:00:00Z",
+  "voteOption": [
+    {"voteOptionId": 1, "caption":  "Red", "presentationOrder":  1},
+    {"voteOptionId": 2, "caption":  "Green", "presentationOrder":  2},
+    {"voteOptionId": 3, "caption":  "Blue", "presentationOrder":  3}
+  ]
+}
+
+###
+
+# List all polls (should show the new poll)
+GET http://localhost:8080/polls
+
+###
+
+# User 2 votes on the poll (selecting "Blue")
+POST http://localhost:8080/votes
+Content-Type: application/json
+
+{
+  "publishedAt": "2024-09-03T12:00:00Z",
+  "voteId": 1,
+  "userId": 2,
+  "pollId": 1,
+  "voteOptionId": 3
+}
+
+###
+
+# List all votes (should show the new vote)
+GET http://localhost:8080/votes
+
+###
+
+# User 2 changes their vote (to "Red")
+PUT http://localhost:8080/votes
+Content-Type: application/json
+
+{
+  "publishedAt": "2024-09-03T12:00:00Z",
+  "voteId": 1,
+  "userId": 2,
+  "pollId": 1,
+  "voteOptionId": 1
+}
+
+###
+
+# List votes for the poll (should show the most recent vote for User 2 as "Red")
+GET http://localhost:8080/votes
+
+###
+
+# Delete the poll
+DELETE http://localhost:8080/polls/1
+
+###
+
+# List votes (shpuld be empty after poll deletion)
+GET http://localhost:8080/votes
