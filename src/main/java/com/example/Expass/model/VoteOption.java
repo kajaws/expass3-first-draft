@@ -3,10 +3,9 @@ package com.example.Expass.model;
 public class VoteOption {
     private String caption;
     private int presentationOrder;
+    private Long voteOptionId;
 
-    public VoteOption(String caption, int presentationOrder) {
-
-    }
+    public VoteOption() {}
 
     public String getCaption() {
         return caption;
@@ -22,5 +21,13 @@ public class VoteOption {
 
     public void setPresentationOrder(int presentationOrder) {
         this.presentationOrder = presentationOrder;
+    }
+
+    public Long getVoteOptionId() {
+        return voteOptionId;
+    }
+
+    public void setVoteOptionId(Long voteOptionId) {
+        this.voteOptionId = voteOptionId;
     }
 }

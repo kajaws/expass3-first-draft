@@ -1,9 +1,5 @@
 package com.example.Expass.model;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-
 import java.time.Instant;
 import java.util.List;
 
@@ -12,15 +8,12 @@ public class Poll {
     private Instant publishedAt;
     private Instant validUntil;
     private List<VoteOption> voteOption;
+    private Long pollId;
+    private Long userId;
 
-    @Id
-    @GeneratedValue (strategy = GenerationType.IDENTITY)
-    private int pollID;
+    public Poll() {}
 
-    public Poll() {
-
-    }
-
+    // Getters and Setters
     public Instant getPublishedAt() {
         return publishedAt;
     }
@@ -45,12 +38,20 @@ public class Poll {
         this.validUntil = validUntil;
     }
 
-    public int getPollID() {
-        return pollID;
+    public Long getPollId() {
+        return pollId;
     }
 
-    public void setPollID(int pollID) {
-        this.pollID = pollID;
+    public void setPollId(Long pollId) {
+        this.pollId = pollId;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public List<VoteOption> getVoteOption() {
