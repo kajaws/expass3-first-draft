@@ -1,15 +1,19 @@
 package com.example.Expass.model;
 
 import java.time.Instant;
+import java.util.UUID;
 
 public class Vote {
     private Instant publishedAt;
-    private Long voteId;
-    private Long userId;
-    private Long voteOptionId;
-    private Long pollId;
+    private String voteId;
+    private String username;
+    private String voteOptionId;
+    private String pollId;
+    private String question;
 
-    public Vote() {}
+    public Vote() {
+        this.voteId = UUID.randomUUID().toString();
+    }
 
     public Instant getPublishedAt() {
         return publishedAt;
@@ -19,35 +23,43 @@ public class Vote {
         this.publishedAt = publishedAt;
     }
 
-    public Long getVoteId() {
+    public String getVoteId() {
         return voteId;
     }
 
-    public void setVoteId(Long voteId) {
+    public void setVoteId(String voteId) {
         this.voteId = voteId;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public Long getVoteOptionId() {
+    public String getVoteOptionId() {
         return voteOptionId;
     }
 
-    public void setVoteOptionId(Long voteOptionId) {
+    public void setVoteOptionId(String voteOptionId) {
         this.voteOptionId = voteOptionId;
     }
 
-    public Long getPollId() {
+    public String getPollId() {
         return pollId;
     }
 
-    public void setPollId(Long pollId) {
+    public void setPollId(String pollId) {
         this.pollId = pollId;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(String question) {
+        this.question = question;
     }
 }

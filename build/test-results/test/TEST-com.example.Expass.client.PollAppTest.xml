@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.Expass.client.PollAppTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-09-08T16:38:55" hostname="kajas-mbp.lan" time="0.571">
+<testsuite name="com.example.Expass.client.PollAppTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-09-10T11:03:11" hostname="Kajas-MacBook-Pro.local" time="0.576">
   <properties/>
-  <testcase name="testScenarioFlow()" classname="com.example.Expass.client.PollAppTest" time="0.571"/>
-  <system-out><![CDATA[18:38:54.578 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.Expass.client.PollAppTest]: PollAppTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-18:38:54.646 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.Expass.ExpassApplication for test class com.example.Expass.client.PollAppTest
+  <testcase name="testScenarioFlow()" classname="com.example.Expass.client.PollAppTest" time="0.576">
+    <failure message="java.lang.AssertionError: [pollId=1]&#10;Expected: a JSON object&#10;     but none found&#10; ; [pollId=1]&#10;Unexpected: a JSON object&#10;" type="java.lang.AssertionError">java.lang.AssertionError: [pollId=1]
+Expected: a JSON object
+     but none found
+ ; [pollId=1]
+Unexpected: a JSON object
+
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:417)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:394)
+	at org.skyscreamer.jsonassert.JSONAssert.assertEquals(JSONAssert.java:336)
+	at org.springframework.test.util.JsonExpectationsHelper.assertJsonEqual(JsonExpectationsHelper.java:61)
+	at org.springframework.test.web.servlet.result.ContentResultMatchers.lambda$json$9(ContentResultMatchers.java:227)
+	at org.springframework.test.web.servlet.MockMvc$1.andExpect(MockMvc.java:214)
+	at com.example.Expass.client.PollAppTest.testScenarioFlow(PollAppTest.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+</failure>
+  </testcase>
+  <system-out><![CDATA[13:03:10.315 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.Expass.client.PollAppTest]: PollAppTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:03:10.376 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.Expass.ExpassApplication for test class com.example.Expass.client.PollAppTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -14,12 +32,234 @@
 
  :: Spring Boot ::                (v3.3.3)
 
-2024-09-08T18:38:54.828+02:00  INFO 18426 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : Starting PollAppTest using Java 21 with PID 18426 (started by kajaskramo in /Users/kajaskramo/Library/CloudStorage/OneDrive-Personlig/Programvareutvikling/Semester 1/DAT250/Expass/Expass2)
-2024-09-08T18:38:54.828+02:00  INFO 18426 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : No active profile set, falling back to 1 default profile: "default"
-2024-09-08T18:38:55.330+02:00  INFO 18426 --- [Expass] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-09-08T18:38:55.330+02:00  INFO 18426 --- [Expass] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-09-08T18:38:55.331+02:00  INFO 18426 --- [Expass] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
-2024-09-08T18:38:55.348+02:00  INFO 18426 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : Started PollAppTest in 0.628 seconds (process running for 1.261)
+2024-09-10T13:03:10.541+02:00  INFO 26248 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : Starting PollAppTest using Java 21 with PID 26248 (started by kajaskramo in /Users/kajaskramo/Library/CloudStorage/OneDrive-Personlig/Programvareutvikling/Semester 1/DAT250/Expass)
+2024-09-10T13:03:10.542+02:00  INFO 26248 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : No active profile set, falling back to 1 default profile: "default"
+2024-09-10T13:03:11.035+02:00  INFO 26248 --- [Expass] [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-09-10T13:03:11.035+02:00  INFO 26248 --- [Expass] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-09-10T13:03:11.036+02:00  INFO 26248 --- [Expass] [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-09-10T13:03:11.050+02:00  INFO 26248 --- [Expass] [    Test worker] com.example.Expass.client.PollAppTest    : Started PollAppTest in 0.611 seconds (process running for 1.188)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /users
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"53"]
+             Body = { "username": "user1", "email": "user1@example.com" }
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.Expass.controller.UserController
+           Method = com.example.Expass.controller.UserController#createUser(User)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"username":"user1","email":"user1@example.com","userId":"9bc67320-9ee4-43cf-9795-f7c43787e651"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.Expass.controller.UserController
+           Method = com.example.Expass.controller.UserController#getAllUsers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"username":"user1","email":"user1@example.com","userId":"9bc67320-9ee4-43cf-9795-f7c43787e651"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /users
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"53"]
+             Body = { "username": "user2", "email": "user2@example.com" }
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.Expass.controller.UserController
+           Method = com.example.Expass.controller.UserController#createUser(User)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"username":"user2","email":"user2@example.com","userId":"32a76ef4-528d-402f-b13c-beec65b4fd3d"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /users
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.Expass.controller.UserController
+           Method = com.example.Expass.controller.UserController#getAllUsers()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"username":"user2","email":"user2@example.com","userId":"32a76ef4-528d-402f-b13c-beec65b4fd3d"},{"username":"user1","email":"user1@example.com","userId":"9bc67320-9ee4-43cf-9795-f7c43787e651"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /polls
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"371"]
+             Body = { "pollId": 1, "username": "user1", "question": "What is your favorite color?", "publishedAt": "2024-09-03T12:00:00Z", "validUntil": "2024-09-10T12:00:00Z", "voteOption": [{ "voteOptionId": 1, "caption": "Red", "presentationOrder": 1 }, { "voteOptionId": 2, "caption": "Green", "presentationOrder": 2 }, { "voteOptionId": 3, "caption": "Blue", "presentationOrder": 3 }] }
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.Expass.controller.PollController
+           Method = com.example.Expass.controller.PollController#createPoll(Poll)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = {"question":"What is your favorite color?","publishedAt":"2024-09-03T12:00:00Z","validUntil":"2024-09-10T12:00:00Z","voteOption":[{"caption":"Red","presentationOrder":1,"voteOptionId":"1"},{"caption":"Green","presentationOrder":2,"voteOptionId":"2"},{"caption":"Blue","presentationOrder":3,"voteOptionId":"3"}],"pollId":"1","userId":null}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /polls
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.example.Expass.controller.PollController
+           Method = com.example.Expass.controller.PollController#getAllPolls()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Vary:"Origin", "Access-Control-Request-Method", "Access-Control-Request-Headers", Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"question":"What is your favorite color?","publishedAt":"2024-09-03T12:00:00Z","validUntil":"2024-09-10T12:00:00Z","voteOption":[{"caption":"Red","presentationOrder":1,"voteOptionId":"1"},{"caption":"Green","presentationOrder":2,"voteOptionId":"2"},{"caption":"Blue","presentationOrder":3,"voteOptionId":"3"}],"pollId":"1","userId":null}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
 ]]></system-out>
   <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/kajaskramo/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.19/154da3a65b4f4a909d3e5bdec55d1b2b4cbb6ce1/byte-buddy-agent-1.14.19.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning

@@ -2,16 +2,19 @@ package com.example.Expass.model;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.UUID;
 
 public class Poll {
     private String question;
     private Instant publishedAt;
     private Instant validUntil;
     private List<VoteOption> voteOption;
-    private Long pollId;
-    private Long userId;
+    private String pollId;
+    private String username;
 
-    public Poll() {}
+    public Poll() {
+        this.pollId = UUID.randomUUID().toString();
+    }
 
     // Getters and Setters
     public Instant getPublishedAt() {
@@ -38,20 +41,16 @@ public class Poll {
         this.validUntil = validUntil;
     }
 
-    public Long getPollId() {
+    public String getPollId() {
         return pollId;
     }
 
-    public void setPollId(Long pollId) {
-        this.pollId = pollId;
+    public String getUsername() {
+        return username;
     }
 
-    public Long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public List<VoteOption> getVoteOption() {
